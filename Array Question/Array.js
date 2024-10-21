@@ -173,6 +173,30 @@
 
 
 
+// 11. **Find the Intersection of Two Arrays**
+// - Task: Write a function that returns the intersection of two arrays.
+// - Test: `findIntersection([1, 2, 3], [2, 3, 4])`
+// - Expected Output: `[2, 3]`
+
+// function Intersection (arr1, arr2) {
+
+//     let final = []
+
+//     for(i=0; i<arr1.length; i++){
+//         for(j=0; j<arr2.length; j++){
+//             if(arr1[i] === arr2[j]){
+//                 final = final + arr1[i]
+//             }
+//         }
+//     }
+//     console.log(final)
+// }
+// Intersection([1,2,3],[2,3,4])
+
+
+
+
+
 
 // 12. **Find the Union of Two Arrays**  
 //     - Task: Write a function that returns the union of two arrays.  
@@ -205,6 +229,47 @@
 //     console.log(sort[1])
 // }
 // secondLargest([1,5,6,3,2,8,9])
+
+
+
+
+
+// 18. **Find the Pair of Elements with the Maximum Sum in an Array**
+// - Task: Write a function that finds the pair of elements with the maximum sum in an array.
+// - Test: `maxSumPair([1, 2, 3, 4, 5])`
+// - Expected Output: `[4, 5]`
+
+// function maxSumPair(arr){
+//     let array = arr.sort((a,b) => b-a)
+//     let final = []
+
+//     for(i=0; i<2; i++){
+//         final.unshift(array[i])
+//     }
+//     console.log(final)
+// }
+// maxSumPair([1,2,3,4,5])
+
+
+
+
+
+// 19. **Find the Pair of Elements with the Minimum Sum in an Array**
+// - Task: Write a function that finds the pair of elements with the minimum sum in an array.
+// - Test: `minSumPair([1, 2, 3, 4, 5])`
+// - Expected Output: `[1, 2]`
+
+// function minSumPair(arr){
+//     let array = arr.sort((a,b) => a-b)
+//     let final = []
+
+//     for(i=0; i<2; i++){
+//         final.push(array[i])
+//     }
+//     console.log(final)
+// }
+// minSumPair([1,2,3,4,5])
+
 
 
 
@@ -264,32 +329,130 @@
 
 
 
+// 20. **Move All Zeros to the End of an Array**
+// - Task: Write a function that moves all zeros in an array to the end, preserving the order of the
+// other elements.
+// - Test: `moveZeros([0, 1, 0, 3, 12])`
+// - Expected Output: `[1, 3, 12, 0, 0]`
+
+// <-------------Solution-------------->
+
+// function zeroatend(arr) {
+    
+//     let result = []
+    
+//     for (i=0; i < arr.length; i++) {
+//         if (arr[i] != 0) {
+//             result.push(arr[i])
+//         }
+//     }
+//     console.log(result)
+    
+//     let zero = arr.length - result.length
+//     for (i=0; i < zero; i++) {
+//     result.push(0)
+// }
+// console.log(result)
+
+// }
+// zeroatend([0, 1, 0, 3, 0, 5, 0, 4])
+
+
+
+
+// 15. **Rotate an Array by K Positions**
+// - Task: Write a function that rotates an array by `k` positions.
+// - Test: `rotateArray([1, 2, 3, 4, 5], 2)`
+// - Expected Output: `[4, 5, 1, 2, 3]`
+
+// function Rotate (arr, target) {
+
+//     let slicedarr = arr.splice(target + 1)
+
+//     console.log(arr)
+//     console.log(slicedarr)
+
+//     for(i=slicedarr.length-1; i>=0; i--){
+//         arr.unshift(slicedarr[i])
+//     }
+//     console.log(arr)
+// }
+// Rotate([1,2,3,4,5], 2)
+
+
+
+
+// 16. **Find the Maximum Difference Between Two Elements in an Array**
+// - Task: Write a function that finds the maximum difference between any two elements in an
+// array.
+// - Test: `maxDifference([2, 3, 10, 6, 4, 8, 1])`
+// - Expected Output: `8`
+
+// let arr = [2,3,10,6,4,8,1]
+
+// let temp = 0
+
+// for(i=0; i<arr.length; i++){
+//     for(j=i+1; j<arr.length; j++){
+//         if(arr[i] > arr[j]){
+//             let temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//         }
+//     }
+// }
+// console.log(arr[arr.length-1] - arr[0])
+
+
+
+
+
+// 21. **Count the Frequency of Each Element in an Array**
+// - Task: Write a function that counts the frequency of each element in an array.
+// - Test: `countFrequency([1, 2, 2, 3, 3, 3])`
+// - Expected Output: `{1: 1, 2: 2, 3: 3}`
+
+// let arr = [1,2,2,2,2,3,3,3]
+
+// let frequency = {}
+
+// for(i=0; i<arr.length; i++){
+//     let element = arr[i]
+//     if(frequency[element]){
+//         frequency[element] += 1
+//     }
+//     else {
+//         frequency[element] = 1
+//     }
+
+// }
+
+
+// console.log(frequency)
 
 
 
 
 
 
+// 23. **Find the Longest Increasing Subsequence in an Array**
+// - Task: Write a function that finds the longest increasing subsequence in an array.
+// - Test: `longestIncreasingSubsequence([10, 22, 9, 33, 21, 50, 41, 60, 80])`
+// - Expected Output: `[10, 22, 33, 50, 60, 80]`
 
+let arr = [10,22,9,33,50,41,60,80]
+let temp = 0
+let final = [arr[0]]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for(i=0; i<arr.length; i++){
+    for(j=i+1; j<arr.length; j++){
+        if(arr[i] < arr[j]){
+            final.push(arr[j])
+        }
+        break
+    }
+}
+console.log(final)
 
 
 

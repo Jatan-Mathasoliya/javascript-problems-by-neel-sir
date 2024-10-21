@@ -435,18 +435,29 @@
 
 // <-------------Solution-------------->
 
-// function substring (str, substring) {
+// function endsWith (str, word) {
+//     string = str.split(' ')
 
-//     let string = str.split(' ')
+//     let end = string.length;
 
-//     if (string[1].includes(substring)) {
+//     sum = 0;
+
+//     for (i=0; i < string.length; i++) {
+//         if (string[end - 1] === word) {
+//             sum = sum + 1;
+//         }
+//         else {
+//             sum = 0;
+//         }
+//     }
+//     if (sum >= 1) {
 //         console.log(true)
 //     }
 //     else {
 //         console.log(false)
 //     }
 // }
-// substring("hello world", "world")
+// endsWith("Jay Swaminarayan my name is Jatan", "jatan")
 
 
 
@@ -475,18 +486,109 @@
 // remove("This is a test . this is test only a .", "test")
 
 
+// let str = "This is a test . only a test ."
+
+// let target = "test"
+
+// let string = str.split(' ')
+
+// let final = ""
+
+// for(i=0; i<string.length; i++){
+//     if(string[i] != target){
+//         final += string[i] + " "
+//     }
+// }
+// console.log(final)
+
+
+
+
+// 16. **Truncate a String**
+// - Task: Write a function that truncates a string to a specified length and adds "..." at the end.
+// - Test:
+// ```javascript
+// console.log(truncateString("This is a long string", 10));
+// ```
+// - Expected Output: `"This is a..."`
+
+// <-------------Solution-------------->
+
+// function truncateString (str, target) {
+
+// let array = Array.from(str)
+
+// for (i=0; i < target; i++) {
+//     console.log(array[i])
+// }
+// for (i=target ; i < target + 3; i++) {
+//     console.log(".")
+// }
+// }
+// truncateString("Jay Swaminarayan my name is Jatan", 10)
 
 
 
 
 
 
+// 17. **Check if a String Starts with a Specific Substring**
+// - Task: Write a function that checks if a string starts with a given substring.
+// - Test:
+// ```javascript
+// console.log(startsWith("hello world", "hello"));
+// console.log(startsWith("hello world", "world"));
+// ```
+// - Expected Output:
+// ```javascript
+// true
+// false
+// ```
+
+// <-------------Solution-------------->
+
+// function startsWith (str, word) {
+//     string = str.split(' ')
+
+//     let sum = 0
+
+//     for (i=0; i < string.length; i++) {
+//         if (string[0] === word) {
+//             sum = sum + 1;
+//         }
+//         else {
+//             sum = 0;
+//         }
+//     }
+//     if (sum >= 1) {
+//         console.log(true)
+//     }
+//     else {
+//         console.log(false)
+//     }
+// }
+// startsWith("hello world", "name");
 
 
+// 19. **Insert a Substring at a Specific Position in a String**
+// - Task: Write a function that inserts a substring at a specific position in a string.
+// - Test:
+// ```javascript
+// console.log(insertSubstring("Hello World", "Beautiful ", 6));
+// ```
+// - Expected Output: `"Hello Beautiful World"`
 
+// function insert (str, word, target) {
 
+//     let string = str.slice(0, target)
+//     let string2 = str.slice(target)
+//     let final = string.concat(word)
 
+//     let final2 = final.concat(string2)
 
+//     console.log(final2)
+// }
+// insert("hello world", "hiii", 3)
 
 
 

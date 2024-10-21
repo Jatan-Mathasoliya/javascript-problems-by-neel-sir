@@ -425,6 +425,31 @@
 // }
 // findMissingNumber([1,2,4,5,6,8])
 
+// function findMissingNumber(arr) {
+
+//     let temp = []
+//     let len = arr.length
+//     let sum1 = 0
+//     for(i=0; i<len; i++) {
+//         for(j=i+1; j<arr.length; j++){
+//             if(arr[i] > arr[j]) {
+//                 temp = arr[i]
+//                 arr[i] = arr[j]
+//                 arr[j] = temp
+//             }
+//         }
+//         sum1 = sum1 + arr[i]
+//     }
+//     let sum2 = 0
+//     for(k=arr[0]; k<=arr[len-1]; k++){
+//         sum2 = sum2 + k
+//     }
+//     let final = sum2 - sum1
+
+//     console.log(final)
+// }
+// findMissingNumber([1,6,2,4,5])
+
 
 
 
@@ -436,27 +461,39 @@
 
 // <-------------Solution-------------->
 
-function rotateArray(arr, k) {
+// function rotateArray(arr, k) {
     
-    let array =  arr.slice(-k).concat(arr.slice(0, -k));
+//     let array =  arr.slice(-k).concat(arr.slice(0, -k));
 
-    console.log(array)
-}
-rotateArray([1,2,3,4,5],4)
-
-
+//     console.log(array)
+// }
+// rotateArray([1,2,3,4,5],4)
 
 
 
 
+// 26. **Find the Longest Word in a String**
+// - Task: Write a function that returns the longest word in a string.
+// - Test: `longestWord('The quick brown fox jumped over the lazy dog')`
+// - Expected Output: `'jumped'`
 
+// <----------solution----------->
 
+// let str = 'The quick brown fox jumped over the lazy dog'
 
+// let arr = str.split(' ')
 
+// let len = arr.length
 
-
-
-
+// let max = arr[0].length
+// let final = arr[0]
+// for(i=0; i<arr.length; i++){
+//     if(arr[i].length > max) {
+//         final = arr[i]
+//         max = arr[i].length
+//     }
+// }
+// console.log(final)
 
 
 
